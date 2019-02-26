@@ -1,2 +1,3 @@
-# leetcode
+# 每日一题
 JavaScript solutions for leetcode
+
