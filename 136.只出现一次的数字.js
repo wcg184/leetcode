@@ -33,7 +33,15 @@
  * @param {number[]} nums
  * @return {number}
  */
-var singleNumber = function(nums) {
-    
+var singleNumber = function (nums) {
+    var number = [nums[0]]
+    for (var i = 1; i < nums.length; i++) {
+        if (number.indexOf(nums[i]) == -1) {
+            number.push(nums[i])
+        } else {
+            number.splice(number.indexOf(nums[i]), 1)
+        }
+    }
+    return number[0]
 };
 
