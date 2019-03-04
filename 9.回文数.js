@@ -52,7 +52,6 @@ var isPalindrome = function (x) {
         palindromeNum = palindromeNum + (x % 10)
         x = Math.floor(x / 10)
     }
-    console.log(palindromeNum)
     return palindromeNum == tempNum
 };
 
