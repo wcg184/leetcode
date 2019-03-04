@@ -36,6 +36,15 @@
  * @return {boolean}
  */
 var containsDuplicate = function (nums) {
-    var arr = [nums[0]]
+    var arr = [],
+        len = nums.length
+    for (var i = 0; i < nums.length; i++) {
+        if (arr.indexOf(nums[i]) == -1) {
+            arr.push(nums[i])
+        } else {
+            arr.splice(i, 1)
+        }
+    }
+    return arr.length !== len ? true : false
 };
 
