@@ -32,7 +32,17 @@
  * @param {number} n
  * @return {boolean}
  */
-var isHappy = function(n) {
-    
+var isHappy = function (n) {
+    n += ""
+    var num = 0
+    for (var i = 0; i < n.toString().length; i++) {
+        num += n[i] * n[i]
+    }
+    if (num == 1 || num == 7) {
+        return true
+    } else if (num < 10) {
+        return false
+    } else {
+        return arguments.callee(num)
+    }
 };
-
